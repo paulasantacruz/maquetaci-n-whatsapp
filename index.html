@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5ddd5; 
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+            max-width: 100%;
+        }
+        .sidebar {
+            width: 30%;
+            background-color: #2a2f32; 
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar-header {
+            height: 60px;
+            background-color: #323739; 
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            font-weight: bold;
+        }
+        .chat-list {
+            flex: 1;
+            overflow-y: auto;
+            background-color: #131c21; 
+        }
+        .chat-item {
+            height: 70px;
+            padding: 10px 15px;
+            border-bottom: 1px solid #323739;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            background-color: #131c21;
+            transition: background-color 0.2s;
+        }
+        .chat-item:hover {
+            background-color: #323739;
+        }
+        .chat-content {
+            width: 70%;
+            background-color: #efeae2; 
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-header {
+            height: 60px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #dcf8c6; 
+            max-width: 60%;
+            align-self: flex-end;
+        }
+        .message.received {
+            background-color: #fff;
+            align-self: flex-start;
+        }
+        .chat-footer {
+            height: 60px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .input-message {
+            flex: 1;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="sidebar">
+            <div class="sidebar-header">WhatsApp</div>
+            <div class="chat-list">
+                <div class="chat-item">Chat 1</div>
+                <div class="chat-item">Chat 2</div>
+                <div class="chat-item">Chat 3</div>
+                <div class="chat-item">Chat 4</div>
+            </div>
+        </div>
+        <div class="chat-content">
+            <div class="chat-header">Nombre del Contacto</div>
+            <div class="messages">
+                <div class="message">Hola, ¿cómo estás?</div>
+                <div class="message received">¡Hola! Estoy bien, ¿y tú?</div>
+                <div class="message">Todo bien, gracias.</div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" class="input-message" placeholder="Escribe un mensaje...">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
